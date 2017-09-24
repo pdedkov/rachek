@@ -4,33 +4,33 @@ user = "user"
 password = "user"
 
 [[vhosts]]
-  name = "/toolbox"
+  name = "/vhost1"
   [[vhosts.queue]]
-    title = "Sape\\Rabbit\\sape"
+    title = "queue1"
     warning = 1.2
     error = 1.5
   [[vhosts.queue]]
-    title = "Screenshot\\Rabbit\\screenshot"
+    title = "queue2"
     warning = 1.2
     error = 1.5
 
 
 [[vhosts]]
-  name = "/miralinks"
+  name = "/vhost2"
   [[vhosts.queue]]
-    title = "Rabbit\\Miralinks\\UpdateRating"
+    title = "queue1"
     warning = 0.7
     error = 1.0
   [[vhosts.queue]]
-    title = "Rabbit\\Link\\link"
+    title = "queue2"
     warning = 1.5
     error = 3.0
   [[vhosts.queue]]
-      title = "Rabbit\\Ground\\SlowStat\\slow"
+      title = "queue3"
       warning = 1.5
       error = 2.0
   [[vhosts.queue]]
-      title = "Rabbit\\Article\\Index\\index"
+      title = "queue4"
       warning = 1.5
       error = 2.0
 
