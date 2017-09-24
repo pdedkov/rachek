@@ -1,7 +1,7 @@
 # rabbit connect url
-url = "http://rabbit.miralinks.com:15672/"
+url = "http://rabbit:15672/"
 user = "user"
-password = "lBsGt5Pz"
+password = "user"
 
 [[vhosts]]
   name = "/toolbox"
