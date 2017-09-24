@@ -20,7 +20,6 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	go d.Run()
 
 	log.Fatal(http.ListenAndServe(":"+*port, d))
 }

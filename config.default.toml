@@ -1,0 +1,36 @@
+# rabbit connect url
+url = "http://rabbit.miralinks.com:15672/"
+user = "user"
+password = "lBsGt5Pz"
+
+[[vhosts]]
+  name = "/toolbox"
+  [[vhosts.queue]]
+    title = "Sape\\Rabbit\\sape"
+    warning = 1.2
+    error = 1.5
+  [[vhosts.queue]]
+    title = "Screenshot\\Rabbit\\screenshot"
+    warning = 1.2
+    error = 1.5
+
+
+[[vhosts]]
+  name = "/miralinks"
+  [[vhosts.queue]]
+    title = "Rabbit\\Miralinks\\UpdateRating"
+    warning = 0.7
+    error = 1.0
+  [[vhosts.queue]]
+    title = "Rabbit\\Link\\link"
+    warning = 1.5
+    error = 3.0
+  [[vhosts.queue]]
+      title = "Rabbit\\Ground\\SlowStat\\slow"
+      warning = 1.5
+      error = 2.0
+  [[vhosts.queue]]
+      title = "Rabbit\\Article\\Index\\index"
+      warning = 1.5
+      error = 2.0
+
