@@ -1,9 +1,9 @@
 package main
 
 import (
-	"bitbucket.org/pdedkov/rachek"
 	"flag"
 	"fmt"
+	"github.com/pdedkov/rachek"
 	"log"
 	"net/http"
 	"os"
