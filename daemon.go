@@ -42,6 +42,11 @@ func (d *Daemon) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 			fmt.Printf("%+v", err)
 			continue
 		}
+		if len(items) == 0 {
+			res.Error = append(res.Error, fmt.Sprintf("Empty Vhost %s", q.Vhost))
+			continue
+		}
+	LOOP:
 		for indx, rec := range q.Queue {
 			for _, i := range items {
 				if rec.Queue == i.Name {
@@ -53,8 +58,10 @@ func (d *Daemon) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 					} else if q.Queue[indx].Messages > q.Queue[indx].Consumers*q.Queue[indx].WarningLevel {
 						res.Warning = append(res.Warning, fmt.Sprintf("%s:%s %.f %.f", q.Vhost, i.Name, q.Queue[indx].Messages, q.Queue[indx].Consumers))
 					}
+					continue LOOP
 				}
 			}
+			res.Error = append(res.Error, fmt.Sprintf("queue %s not found in vhost %s", rec.Queue, q.Vhost))
 		}
 	}
 	if len(res.Error) == 0 && len(res.Warning) == 0 {
