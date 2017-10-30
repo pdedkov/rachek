@@ -19,15 +19,9 @@
   packages = ["."]
   revision = "6090faf7ae1a4cb9d3d243e5bee6fb0b4574d8a3"
 
-[[projects]]
-  branch = "master"
-  name = "github.com/pdedkov/rachek"
-  packages = ["."]
-  revision = "7016a224a5130c044b7594b3862abd789d13b988"
-
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "a351988ee24c75517c6165ce503c78cb66f4f84eb8ecfc39e609fdef7e0489c8"
+  inputs-digest = "5e544476582d590b34e9796d43c8d6824bda76495c27f70b4cccba7ce34a79b4"
   solver-name = "gps-cdcl"
   solver-version = 1
